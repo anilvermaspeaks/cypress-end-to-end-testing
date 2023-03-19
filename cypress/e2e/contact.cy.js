@@ -13,7 +13,7 @@ describe('contact form', () => {
             expect(el.text()).is.not.eq('sending...')
         })
 
-        cy.get('[data-cy="contact-btn-submit"]').contains('Send Message')
+        cy.getById('contact-btn-submit').contains('Send Message')
         cy.get('[data-cy="contact-input-message"]').blur()
 
         cy.get('[data-cy="contact-input-message"]').parent()
