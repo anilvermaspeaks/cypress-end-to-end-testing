@@ -4,7 +4,7 @@ describe('contact form', () => {
 
     it('should validate contact form', () => {
 
-        cy.visit('http://localhost:5173/about');
+        cy.visit('/about');
         cy.get('[data-cy="contact-btn-submit"]').click();
 
         cy.get('[data-cy="contact-btn-submit"]').then((el) => {
