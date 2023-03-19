@@ -5,7 +5,8 @@ describe('contact form', () => {
     it('should validate contact form', () => {
 
         cy.visit('/about');
-        cy.get('[data-cy="contact-btn-submit"]').click();
+        //created custom command 
+        cy.submitForm();
 
         cy.get('[data-cy="contact-btn-submit"]').then((el) => {
             expect(el).to.not.have.attr('disabled')
